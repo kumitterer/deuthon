@@ -1,9 +1,28 @@
 importiere http.client
 
-klasse HTÜPAntwort(http.client.HTTPResponse):
-    definiere __init__(selbst, *argumente, **swargumente):
-        super().__init__(*argumente, **swargumente)
+klasse HTÜPVerbindung(http.client.HTTPConnection):
+    definiere __init__(selbst, gastgeber, anschluss, 
+                       auszeit=Nichts, quelladdresse=Nicht, 
+                       blockgröße=Nichts):
 
+        swargumente = {
+            "host": gastgeber,
+            "port": anschluss,
+        }
+
+        falls auszeit:
+            swargumente["timeout"] = auszeit
+
+        falls quelladresse:
+            swargumente["source_address"] = quelladresse
+
+        falls blockgröße:
+            swargumente["blocksize"] = blockgröße
+
+        super().__init__(selbst, **swargumente)
+
+
+klasse HTÜPAntwort(http.client.HTTPResponse):
     definiere lesen(selbst, *argumente, **swargumente):
         return super().read(*argumente, **swargumente)
  
