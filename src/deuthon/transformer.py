@@ -5,6 +5,7 @@ from io import BytesIO
 
 from .dictionary import dictionary
 
+
 def translate_german_keywords(tokens):
     for token in tokens:
         # Translate German keywords to English
@@ -13,9 +14,10 @@ def translate_german_keywords(tokens):
         else:
             yield token
 
+
 def parse_german_code(german_code):
     # Convert the German code into bytes for tokenization
-    bytes_code = bytes(german_code, 'utf-8')
+    bytes_code = bytes(german_code, "utf-8")
 
     # Tokenize the German code
     tokens = tokenize.tokenize(BytesIO(bytes_code).readline)
@@ -24,10 +26,11 @@ def parse_german_code(german_code):
     english_tokens = translate_german_keywords(tokens)
 
     # Detokenize back to a code string in English/Python
-    python_code_str = tokenize.untokenize(english_tokens).decode('utf-8')
+    python_code_str = tokenize.untokenize(english_tokens).decode("utf-8")
 
     # Return the compiled Python code object
     return python_code_str
+
 
 def prepare_builtin_overrides():
     import sys
