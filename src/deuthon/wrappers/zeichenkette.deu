@@ -1,0 +1,24 @@
+importiere string
+
+klasse Formatierer(string.Formatter):
+    def __init__(selbst, *argumente, **swargumente):
+        super().__init__(*argumente, **swargumente)
+
+    def formatiere(selbst, formatstring, *argumente, **swargumente):
+        gibzurück super().format(formatstring, *argumente, **swargumente)
+
+klasse Vorlage(string.Template):
+    def __init__(selbst, *argumente, **swargumente):
+        super().__init__(*argumente, **swargumente)
+
+ascii_buchstaben = string.ascii_letters
+ascii_kleinbuchstaben = string.ascii_lowercase
+ascii_großbuchstaben = string.ascii_uppercase
+ziffern = string.digits
+hexadezimalziffern = string.hexdigits
+oktalziffern = string.octdigits
+druckbar = string.printable
+leerzeichen = string.whitespace
+punktuation = string.punctuation
+
+kapitalisiere_wörter = string.capwords

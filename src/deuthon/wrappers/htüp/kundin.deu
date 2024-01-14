@@ -1,0 +1,9 @@
+importiere http.client
+
+klasse HTÜPAntwort(http.client.HTTPResponse):
+    definiere __init__(selbst, *argumente, **swargumente):
+        super().__init__(*argumente, **swargumente)
+
+    definiere lesen(selbst, *argumente, **swargumente):
+        return super().read(*argumente, **swargumente)
+ 

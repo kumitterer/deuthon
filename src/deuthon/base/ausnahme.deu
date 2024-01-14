@@ -1,0 +1,2 @@
+GrundAusnahme = BaseException
+Ausnahme = Exception

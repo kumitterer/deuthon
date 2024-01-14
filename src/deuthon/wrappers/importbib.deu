@@ -1,0 +1,3 @@
+importiere importlib
+
+importiere_modul = importlib.import_module

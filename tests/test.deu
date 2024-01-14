@@ -1,0 +1,50 @@
+# Tests für `drucke()` und globale Variablen
+
+drucke("Starte Tests...")
+drucke(f"Aktuelle Datei: " + str(__datei__))
+
+# Import-Tests
+
+aus zufall importiere SystemZufall
+aus zeit importiere zeit
+
+importiere testmodul.test
+importiere testimport
+
+# Variablen-Tests (Typen, Zuweisungen, etc.)
+
+länge: ganzzahl = 1
+
+system_zufall: SystemZufall = SystemZufall()
+system_zufall.besamen(ganzzahl(zeit()))
+
+
+# Funktions-Tests (Parameter, Rückgabewerte, etc.)
+
+definiere hallo_welt(länge: ganzzahl = länge) -> Nichts:
+    global system_zufall
+    für i in Bereich(länge):
+        falls nicht wahrheitswert(system_zufall.zufallsganzzahl(0, 1)) == Wahr:
+            drucke(i, ": Hallo Welt!")
+        anderenfalls:
+            drucke(i, ": Tschüss Welt!")
+
+drucke(hallo_welt())
+
+
+# Sicherstellung von Bedingungen
+
+stellesicher nicht hallo_welt(), "Hallo Welt ist nicht Nichts!"
+
+
+# Werfen von Ausnahmen 
+
+versuche:
+    wirf Ausnahme("Test")
+außer Ausnahme als a:
+    drucke(a)
+
+
+# ERVBib und JSON
+
+importiere ervbib_json

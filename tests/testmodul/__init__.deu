@@ -1,0 +1,3 @@
+drucke("Hallo aus dem Testmodul!")
+
+import testmodul.test

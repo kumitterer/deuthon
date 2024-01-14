@@ -1,0 +1,27 @@
+importiere urllib.request
+importiere http.client
+
+importiere htüp.kundin
+
+definiere Anfrage(erv, *argumente, **swargumente):
+    kopfzeilen = swargumente.get("kopfzeilen", {})
+
+    wenn "kopfzeilen" in swargumente:
+        lösche swargumente["kopfzeilen"]
+
+    wenn "benutzer_agent" in swargumente:
+        kopfzeilen["User-Agent"] = swargumente["benutzer_agent"]
+        lösche swargumente["benutzer_agent"]
+
+    wenn kopfzeilen:
+        swargumente["headers"] = kopfzeilen
+
+    gibzurück urllib.request.Request(erv, *argumente, **swargumente)
+        
+definiere ervöffnen(*argumente, **swargumente):
+    antwort = urllib.request.urlopen(*argumente, **swargumente)
+
+    wenn istinstanz(antwort, http.client.HTTPResponse):
+        antwort.__klasse__ = htüp.kundin.HTÜPAntwort
+
+    gibzurück antwort

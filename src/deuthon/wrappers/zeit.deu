@@ -1,0 +1,4 @@
+importiere time
+
+schlafe = time.sleep
+zeit = time.time

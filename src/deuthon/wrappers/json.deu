@@ -1,0 +1,6 @@
+importiere sysjson
+
+laden = sysjson.load
+ladenz = sysjson.loads
+abladen = sysjson.dump
+abladenz = sysjson.dumps

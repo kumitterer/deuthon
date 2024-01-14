@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deuthon"
+version = "0.0.1"
+authors = [
+  { name="Kumi Mitterer", email="deuthon@kumi.email" },
+]
+description = "Deuthon interpreter written in Python"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+deuthon = "deuthon.__main__:main"
+
+[project.urls]
+"Homepage" = "https://kumig.it/kumitterer/deuthon"
+"Bug Tracker" = "https://kumig.it/kumitterer/deuthon/issues"

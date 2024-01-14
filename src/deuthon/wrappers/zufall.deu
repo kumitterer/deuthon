@@ -1,0 +1,18 @@
+importiere random
+
+klasse SystemZufall(random.SystemRandom):
+    def __init__(selbst, *argumente, **swargumente):
+        super().__init__(*argumente, **swargumente)
+
+    def besamen(selbst, *argumente, **swargumente):
+        gibzurück selbst.seed(*argumente, **swargumente)
+
+    def zufallsganzzahl(selbst, a, b):
+        gibzurück selbst.randint(a, b)
+
+    def zufall(selbst):
+        gibzurück selbst.random()
+
+zufallsganzzahl = random.randint
+zufall = random.random
+besamen = random.seed

@@ -1,0 +1,9 @@
+importiere ervbib.anfrage
+importiere json
+
+anfrage = ervbib.anfrage.Anfrage(
+    erv="https://geek-jokes.sameerkumar.website/api?format=json",
+    benutzer_agent="ERV-Test/1.0",
+)
+
+drucke(json.ladenz(ervbib.anfrage.ervöffnen(anfrage).lesen().dekodieren())["joke"])
