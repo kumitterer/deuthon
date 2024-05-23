@@ -34,6 +34,7 @@ def parse_german_code(german_code):
 
 def prepare_builtin_overrides():
     import sys
+    import json  # noqa: F401
 
     original_json = sys.modules["json"]
     sys.modules["sysjson"] = original_json
