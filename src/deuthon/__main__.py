@@ -3,7 +3,6 @@
 import ast
 import tokenize
 import pathlib
-import setuptools
 import sys
 import traceback
 
