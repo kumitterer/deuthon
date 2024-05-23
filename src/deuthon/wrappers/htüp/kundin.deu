@@ -2,7 +2,7 @@ importiere http.client
 
 klasse HTÜPVerbindung(http.client.HTTPConnection):
     definiere __init__(selbst, gastgeber, anschluss, 
-                       auszeit=Nichts, quelladdresse=Nicht, 
+                       auszeit=Nichts, quelladdresse=Nichts, 
                        blockgröße=Nichts):
 
         swargumente = {
