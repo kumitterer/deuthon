@@ -1,7 +1,7 @@
 # Tests für `drucke()` und globale Variablen
 
 drucke("Starte Tests...")
-drucke(f"Aktuelle Datei: " + str(__datei__))
+drucke(f"Aktuelle Datei: " + zeichenkette(__datei__))
 
 # Import-Tests
 
