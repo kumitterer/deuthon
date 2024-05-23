@@ -1,0 +1,23 @@
+klasse ganzzahl(int):
+    passe
+
+klasse zeichenkette(str):
+    passe
+
+klasse fließkommazahl(float):
+    passe
+
+klasse liste(list):
+    passe
+
+klasse tupel(tuple):
+    passe
+
+klasse wörterbuch(dict):
+    passe
+
+klasse menge(set):
+    passe
+
+klasse gefrorenemenge(frozenset):
+    passe
